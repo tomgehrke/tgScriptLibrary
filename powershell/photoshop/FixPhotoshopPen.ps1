@@ -6,7 +6,7 @@
 
 # Disable use of Windows pen API
 
-$PhotoshopFolders = Get-ChildItem -Path "$env:APPDATA\Adobe\Adobe Photoshop CC *"
+$PhotoshopFolders = Get-ChildItem -Path "$env:APPDATA\Adobe\Adobe Photoshop *"
 
 foreach ($PhotoshopVersion in $PhotoshopFolders) {
     $SettingsFolder = "$PhotoshopVersion\$(Split-Path $PhotoshopVersion -Leaf) Settings"
